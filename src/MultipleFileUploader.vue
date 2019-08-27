@@ -227,16 +227,16 @@ export default {
                         this.isLoaderVisible = false;
                         // Show success message
                         if(this.showHttpMessages)
-                          this.successMsg = response.data[this.successMessagePath];
+                          this.successMsg = response.data + ". " +this.successMessagePath;
                         this.removeItems();
-                        this.$emit('success_handler', response);
+                        this.$emit('upload-success', response);
                     })
                     .catch((error) => {
                         this.isLoaderVisible = false;
                         if(this.showHttpMessages)
-                          this.errorMsg = error.data[this.errorMessagePath];
+                          this.errorMsg = error.data + ". " + this.errorMessagePath;
                         this.removeItems();
-                        this.$emit('error_handler', response);
+                        this.$emit('upload-error', error);
                     });
             } else {
                 if(this.showHttpMessages)

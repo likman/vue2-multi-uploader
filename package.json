@@ -13,8 +13,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "axios": "^0.19.0",
-    "es6-promise": "~4.2.8"
+    "axios": "^0.15.3",
+    "es6-promise": "~4.1.0"
   },
   "bugs": {
     "url": "https://github.com/updivision/vue2-multi-uploader/issues"
